@@ -19,6 +19,6 @@
         <Image Height="120" Canvas.Left="102" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="search_128px.png"/>
         <Image Height="120" Canvas.Left="579" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="tool_128px.png"/>
         <Image Height="120" Canvas.Left="340" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="pie_chart_128px.png"/>
-        <Label x:Name="Tag" Content="免费工具" Canvas.Left="718" Canvas.Top="333" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="Tag" Content="CleanTool  Programed by C#" Canvas.Left="573" Canvas.Top="333" FontSize="14" FontWeight="Bold" Foreground="White"/>
     </Canvas>
 </Window>
