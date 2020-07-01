@@ -18,19 +18,22 @@ namespace WpfApp1
 
         private void ScanBtn_Click(object sender, RoutedEventArgs e)
         {
-            TabItem tabItem = new TabItem();
+           
         }
 
         private void InfoBtn_Click(object sender, RoutedEventArgs e)
         {
             InfoWindow infoWindow = new InfoWindow();
             infoWindow.Show();
+            this.Close();
             
         }
 
         private void ToolBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Tools tools = new Tools();
+            tools.Show();
+            this.Close();
         }
     }
 }

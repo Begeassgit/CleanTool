@@ -5,13 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="本机信息" Height="400" Width="800" ResizeMode="NoResize" Icon="process_96px.png">
+        Title="本机信息" Height="400" Width="800" ResizeMode="NoResize" Icon="process_96px.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <DockPanel LastChildFill="False">
-            <Canvas Width="792" Background="White">
-                <Rectangle Height="56" Stroke="Black" Width="792" Fill="#FF0885B4"/>
-                <Button x:Name="ReturnBtn" Content="返  回" Canvas.Left="10" Canvas.Top="10" Width="70" Height="35" FontSize="18" Background="White" FontWeight="Bold" RenderTransformOrigin="0.493,0.471"/>
-                <Label x:Name="InfoTitle" Content="基本信息" Canvas.Top="61" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="10"/>
+            <Canvas Width="795">
+                <Canvas.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF0885B4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Canvas.Background>
+                <Button x:Name="ReturnBtn" Content="返  回" Canvas.Left="698" Canvas.Top="23" Width="70" Height="35" FontSize="18" Background="#FF41C6CD" RenderTransformOrigin="0.493,0.471" Foreground="White" Click="ReturnBtn_Click" BorderBrush="{x:Null}"/>
+                <Label x:Name="InfoTitle" Content="基本信息" Canvas.Top="23" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="42"/>
+                <Image Height="185" Canvas.Top="82" Width="187" Source="ok_128px.png"/>
+                <Label x:Name="Tags" Content="CleanTool  Programed by C#" Canvas.Left="573" Canvas.Top="333" FontSize="14" FontWeight="Bold" Foreground="White"/>
+                <Label x:Name="CPUName" Content="Label" Canvas.Left="198" Canvas.Top="82" FontSize="14"/>
+                <Label x:Name="CPUWidth" Content="Label" Canvas.Left="198" Canvas.Top="138" FontSize="14"/>
+                <Label x:Name="CPUArchitecture" Content="Label" Canvas.Left="198" Canvas.Top="110" FontSize="14"/>
+                <Label x:Name="CPUInfo" Content="CPU信息" Canvas.Left="187" Canvas.Top="49" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="MemoryInfo" Content="内存信息" Canvas.Left="187" Canvas.Top="171" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="MemoryManufacture" Content="Label" Canvas.Left="198" Canvas.Top="260" FontSize="14"/>
+                <Label x:Name="MemoryCapacity" Content="Label" Canvas.Left="198" Canvas.Top="232" FontSize="14"/>
+                <Label x:Name="MemoryName" Content="Label" Canvas.Left="198" Canvas.Top="204" FontSize="14"/>
+                <Label x:Name="GPUInfo" Content="显卡信息" Canvas.Left="187" Canvas.Top="293" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="GPUName" Content="Label" Canvas.Left="198" Canvas.Top="326" FontSize="14"/>
+                <Label x:Name="BoardInfo" Content="主板信息" Canvas.Left="464" Canvas.Top="110" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="BoardManufacture" Content="Label" Canvas.Left="480" Canvas.Top="171" FontSize="14"/>
+                <Label x:Name="BoardName" Content="Label" Canvas.Left="480" Canvas.Top="143" FontSize="14"/>
+                <Label x:Name="SysCaption" Content="Label" Canvas.Left="480" Canvas.Top="232" FontSize="14"/>
+                <Label x:Name="SysInfo" Content="系统信息" Canvas.Left="464" Canvas.Top="199" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="Disk" Content="硬盘信息" Canvas.Left="464" Canvas.Top="260" FontWeight="Bold" FontSize="18"/>
+                <Label x:Name="DiskCapacity" Content="Label" Canvas.Left="480" Canvas.Top="293" FontSize="14"/>
             </Canvas>
         </DockPanel>
     </Grid>
