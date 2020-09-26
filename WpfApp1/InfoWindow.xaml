@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="本机信息" Height="400" Width="800" ResizeMode="NoResize" Icon="process_96px.png" WindowStartupLocation="CenterScreen">
+        Title="本机信息" Height="400" Width="800" ResizeMode="NoResize" Icon="Images/process_96px.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <DockPanel LastChildFill="False">
             <Canvas Width="795">
@@ -17,7 +17,7 @@
                 </Canvas.Background>
                 <Button x:Name="ReturnBtn" Content="返  回" Canvas.Left="698" Canvas.Top="23" Width="70" Height="35" FontSize="18" Background="#FF41C6CD" RenderTransformOrigin="0.493,0.471" Foreground="White" Click="ReturnBtn_Click" BorderBrush="{x:Null}"/>
                 <Label x:Name="InfoTitle" Content="基本信息" Canvas.Top="23" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="42"/>
-                <Image Height="185" Canvas.Top="82" Width="187" Source="ok_128px.png"/>
+                <Image Height="185" Canvas.Top="82" Width="187" Source="Images/ok_128px.png"/>
                 <Label x:Name="Tags" Content="CleanTool  Programed by C#" Canvas.Left="573" Canvas.Top="333" FontSize="14" FontWeight="Bold" Foreground="White"/>
                 <Label x:Name="CPUName" Content="Label" Canvas.Left="198" Canvas.Top="82" FontSize="14"/>
                 <Label x:Name="CPUWidth" Content="Label" Canvas.Left="198" Canvas.Top="138" FontSize="14"/>

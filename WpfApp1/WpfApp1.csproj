@@ -139,24 +139,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="search_128px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pie_chart_128px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="tool_128px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="process_96px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ok_128px.png" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
@@ -170,28 +153,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="low.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="bootup.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="electronics.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="wi_fi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="GPU.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="feedback.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="click.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="speed.png" />
+    <Resource Include="Images\bootup.png" />
+    <Resource Include="Images\click.png" />
+    <Resource Include="Images\electronics.png" />
+    <Resource Include="Images\feedback.png" />
+    <Resource Include="Images\GPU.png" />
+    <Resource Include="Images\low.png" />
+    <Resource Include="Images\ok_128px.png" />
+    <Resource Include="Images\pie_chart_128px.png" />
+    <Resource Include="Images\process_96px.png" />
+    <Resource Include="Images\search_128px.png" />
+    <Resource Include="Images\speed.png" />
+    <Resource Include="Images\tool_128px.png" />
+    <Resource Include="Images\wi_fi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

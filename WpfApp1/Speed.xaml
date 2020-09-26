@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Speed" Height="400" Width="800" Icon="process_96px.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Speed" Height="400" Width="800" Icon="Images/process_96px.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="-4,0,-4,-4">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -14,7 +14,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Button x:Name="ReturnBtn" Content="返 回" HorizontalAlignment="Left" Margin="712,14,0,0" VerticalAlignment="Top" Width="70" Height="35" FontSize="18" Background="#FF41C6CD" Foreground="White" Click="ReturnBtn_Click" BorderBrush="{x:Null}"/>
-        <Image x:Name="Click" Height="200" Margin="300,60,300,115" VerticalAlignment="Center" Width="200" Source="speed.png" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center"/>
+        <Image x:Name="Click" Height="200" Margin="300,60,300,115" VerticalAlignment="Center" Width="200" Source="Images/speed.png" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center"/>
         <Button x:Name="Start" Content="开始测速" HorizontalAlignment="Left" Margin="360,285,0,0" VerticalAlignment="Top" Width="80" Height="40" FontSize="16" Background="#FF69C179" Click="Start_Click" Foreground="White" BorderBrush="{x:Null}"/>
 
     </Grid>

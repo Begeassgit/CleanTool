@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="清理工具" Height="400" Width="800" ResizeMode="NoResize" Icon="process_96px.png" WindowStartupLocation="CenterScreen">
+        Title="清理工具" Height="400" Width="800" ResizeMode="NoResize" Icon="Images/process_96px.png" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="White" Offset="0"/>
@@ -16,9 +16,9 @@
         <Button x:Name="ScanBtn" Content="扫描" Canvas.Left="115" Canvas.Top="220" Width="90" HorizontalAlignment="Center" Height="50" FontSize="20" Click="ScanBtn_Click" Foreground="White" Background="#FF41C6CD" BorderBrush="{x:Null}"/>
         <Button x:Name="ToolBtn" Content="工具" Canvas.Left="596" Canvas.Top="220" Width="90" Height="50" HorizontalAlignment="Center" FontSize="20" Click="ToolBtn_Click" Foreground="White" Background="#FF41C6CD" BorderBrush="{x:Null}"/>
         <Button x:Name="InfoBtn" Content="电脑信息" Canvas.Left="355" Canvas.Top="220" Width="90" Height="50"  HorizontalAlignment="Center" FontSize="20" Click="InfoBtn_Click" Foreground="White" Background="#FF41C6CD" BorderBrush="{x:Null}"/>
-        <Image Height="120" Canvas.Left="102" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="search_128px.png"/>
-        <Image Height="120" Canvas.Left="579" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="tool_128px.png"/>
-        <Image Height="120" Canvas.Left="340" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="pie_chart_128px.png"/>
+        <Image Height="120" Canvas.Left="102" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="Images/search_128px.png"/>
+        <Image Height="120" Canvas.Left="579" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="Images/tool_128px.png"/>
+        <Image Height="120" Canvas.Left="340" Canvas.Top="66" Width="120" RenderTransformOrigin="0.5,0.483" Source="Images/pie_chart_128px.png"/>
         <Label x:Name="Tags" Content="CleanTool  Programed by C#" Canvas.Left="573" Canvas.Top="333" FontSize="14" FontWeight="Bold" Foreground="White"/>
     </Canvas>
 </Window>
