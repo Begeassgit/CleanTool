@@ -76,7 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Function\SpeedPing.cs" />
+    <Compile Include="Function\SpeedTest.cs" />
     <Compile Include="Speed.xaml.cs">
       <DependentUpon>Speed.xaml</DependentUpon>
     </Compile>
@@ -139,7 +139,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="TempFile\" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.Function;
+
 
 namespace WpfApp1
 {
@@ -20,6 +23,9 @@ namespace WpfApp1
     /// </summary>
     public partial class Speed : Window
     {
+
+        static double time;
+
         public Speed()
         {
             InitializeComponent();
@@ -47,6 +53,17 @@ namespace WpfApp1
             Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath("RenderTransform.Angle"));
             storyboard.Children.Add(doubleAnimation);
             storyboard.Begin(this.Click);
+            SpeedTest speedTest = new SpeedTest();
+            double download = speedTest.DownloadTempFile();
+            if (download==-1.0)
+            {
+                time = 0;
+            }
+            else
+            {
+                time = download;
+            }
+
         }
     }
 }

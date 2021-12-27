@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WpfApp1.Entity;
 using System.Management;
+using System.IO;
 
 namespace WpfApp1.Function
 {
@@ -13,9 +14,9 @@ namespace WpfApp1.Function
         public SysInfo GetSysInfo()
         {
             SysInfo sysInfo = new SysInfo();
-            double temp;
             int countMemory = 0;
             int countDisk = 0;
+            double temp;
             try
             {
                 ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher("Select * FROM Win32_Processor");
@@ -23,7 +24,6 @@ namespace WpfApp1.Function
                 {
                     sysInfo.CpuName = managementObject["Name"].ToString().Trim();
                     sysInfo.CpuAddressWidth = managementObject["AddressWidth"].ToString().Trim();
-                    sysInfo.CpuArchitecture = managementObject["Architecture"].ToString().Trim();
                     sysInfo.CpuStatusInfo = managementObject["StatusInfo"].ToString().Trim();
                 }
 
@@ -38,15 +38,20 @@ namespace WpfApp1.Function
                     
                 }
 
-                managementObjectSearcher = new ManagementObjectSearcher("Select * FROM Win32_DiskDrive");
-                foreach (ManagementObject managementObject in managementObjectSearcher.Get())
+                DriveInfo[] driveInfos = DriveInfo.GetDrives();
+                foreach (DriveInfo driveInfo in driveInfos)
                 {
-                    sysInfo.HardDiskName[countDisk] = managementObject["Model"].ToString().Trim();  
-                    countDisk++;
-                    temp = double.Parse(managementObject["Size"].ToString().Trim()) / 1024 / 1024 * countDisk;
-                    sysInfo.HardDiskSize = temp.ToString().Trim();
-                  
+                    if (driveInfo.IsReady)
+                    {
+                        var tempSize = driveInfo.TotalSize / 1024.0 / 1024.0 / 1024.0;
+                        sysInfo.HardDisk.Add("DiskName"+countDisk, driveInfo.Name);
+                        sysInfo.HardDisk.Add("Size" + countDisk, tempSize.ToString("f2"));
+                        sysInfo.HardDisk.Add("Type" + countDisk, driveInfo.DriveType.ToString());
+                        countDisk++;
+                    }
                 }
+                sysInfo.DiskNumber = countDisk;
+
                 managementObjectSearcher = new ManagementObjectSearcher("Select * FROM Win32_DisplayConfiguration");
                 foreach (ManagementObject managementObject in managementObjectSearcher.Get())
                 {

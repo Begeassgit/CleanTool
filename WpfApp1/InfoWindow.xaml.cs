@@ -27,7 +27,6 @@ namespace WpfApp1
             SysInfoFunction sysInfoFunction = new SysInfoFunction();
             SysInfo MySysInfo = sysInfoFunction.GetSysInfo();
             CPUName.Content="CPU型号："+MySysInfo.CpuName;
-            CPUArchitecture.Content ="CPU架构："+ MySysInfo.CpuArchitecture;
             CPUWidth.Content ="CPU位宽："+MySysInfo.CpuAddressWidth;
             MemoryCapacity.Content = "内存大小：" + MySysInfo.MemoryCapacity+"GB";
             MemoryManufacture.Content = "内存品牌：" + MySysInfo.MemoryManufacturer;
@@ -36,7 +35,17 @@ namespace WpfApp1
             BoardManufacture.Content = "主板制造商：" + MySysInfo.BoardManufacturer;
             BoardName.Content = "主板类型：" + MySysInfo.BoardName;
             SysCaption.Content = "系统信息：" + MySysInfo.SysCaption;
-            DiskCapacity.Content = "当前磁盘：" + MySysInfo.HardDiskSize;
+            string tempDiskText;
+            for(int i = 0; i < MySysInfo.DiskNumber; i++)
+            {
+                tempDiskText = "磁盘" + i + "盘符：" + MySysInfo.HardDisk["DiskName" + i]+"\n";
+                DiskInfo.Text += tempDiskText;
+                tempDiskText = "磁盘" + i + "容量：" + MySysInfo.HardDisk["Size" + i] + "GB\n";
+                DiskInfo.Text += tempDiskText;
+                tempDiskText = "磁盘" + i + "类型：" + MySysInfo.HardDisk["Type" + i] + "\n";
+                DiskInfo.Text += tempDiskText;
+            }
+            
         }
 
         private void ReturnBtn_Click(object sender, RoutedEventArgs e)
