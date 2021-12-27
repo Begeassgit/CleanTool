@@ -31,7 +31,13 @@ namespace WpfApp1
             MemoryCapacity.Content = "内存大小：" + MySysInfo.MemoryCapacity+"GB";
             MemoryManufacture.Content = "内存品牌：" + MySysInfo.MemoryManufacturer;
             MemoryName.Content = "内存类型：" + MySysInfo.MemoryName;
-            GPUName.Content = "GPU型号：" + MySysInfo.GpuName;
+            string tempGPU;
+            for(int i = 0; i < MySysInfo.GPUNumber; i++)
+            {
+                tempGPU = "GPU"+i+"型号：" + MySysInfo.GpuName["GPU"+i]+"\n";
+                GPUName.Text += tempGPU;
+            }
+            
             BoardManufacture.Content = "主板制造商：" + MySysInfo.BoardManufacturer;
             BoardName.Content = "主板类型：" + MySysInfo.BoardName;
             SysCaption.Content = "系统信息：" + MySysInfo.SysCaption;

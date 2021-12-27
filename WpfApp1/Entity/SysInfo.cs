@@ -18,7 +18,8 @@ namespace WpfApp1.Entity
         private string boardName;
         private Dictionary<string, string> hardDisk = new Dictionary<string, string>();
         private int diskNumber;
-        private string gpuName;
+        private Dictionary<string,string> gpuName = new Dictionary<string, string>();
+        private int gpuNumber;
         private string sysCaption;
         
 
@@ -30,10 +31,11 @@ namespace WpfApp1.Entity
         public string MemoryCapacity { get => memoryCapacity; set => memoryCapacity = value; }
         public string BoardManufacturer { get => boardManufacturer; set => boardManufacturer = value; }
         public string BoardName { get => boardName; set => boardName = value; }
-        public string GpuName { get => gpuName; set => gpuName = value; }
+        public Dictionary<string,string> GpuName { get => gpuName; set => gpuName = value; }
         public string SysCaption { get => sysCaption; set => sysCaption = value; }
         public Dictionary<string, string> HardDisk { get => hardDisk; set => hardDisk = value; }
         public int DiskNumber { get => diskNumber; set => diskNumber = value; }
+        public int GPUNumber { get => gpuNumber; set => gpuNumber = value; }
        
     }
 }

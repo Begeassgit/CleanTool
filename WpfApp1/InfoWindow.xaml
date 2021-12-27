@@ -27,7 +27,6 @@
                 <Label x:Name="MemoryCapacity" Content="Label" Canvas.Left="198" Canvas.Top="277" FontSize="14"/>
                 <Label x:Name="MemoryName" Content="Label" Canvas.Left="198" Canvas.Top="244" FontSize="14"/>
                 <Label x:Name="GPUInfo" Content="显卡信息" Canvas.Left="485" Canvas.Top="239" FontWeight="Bold" FontSize="18"/>
-                <Label x:Name="GPUName" Content="Label" Canvas.Left="503" Canvas.Top="277" FontSize="14"/>
                 <Label x:Name="BoardInfo" Content="主板信息" Canvas.Left="485" Canvas.Top="135" FontWeight="Bold" FontSize="18"/>
                 <Label x:Name="BoardManufacture" Content="Label" Canvas.Left="503" Canvas.Top="203" FontSize="14"/>
                 <Label x:Name="BoardName" Content="Label" Canvas.Left="503" Canvas.Top="173" FontSize="14"/>
@@ -35,6 +34,7 @@
                 <Label x:Name="SysInfo" Content="系统信息" Canvas.Left="187" Canvas.Top="135" FontWeight="Bold" FontSize="18"/>
                 <Label x:Name="Disk" Content="硬盘信息" Canvas.Left="186" Canvas.Top="341" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.5,0.574"/>
                 <TextBlock Name="DiskInfo" Canvas.Left="203" TextWrapping="Wrap" Text="" Canvas.Top="379" Height="124" Width="242" FontFamily="Microsoft YaHei UI" FontWeight="Normal" FontSize="14"/>
+                <TextBlock Name="GPUName" Canvas.Left="506" TextWrapping="Wrap" Text="" Canvas.Top="277" Height="164" Width="270" FontFamily="Microsoft YaHei UI" FontWeight="Normal" FontSize="14"/>
             </Canvas>
         </DockPanel>
     </Grid>

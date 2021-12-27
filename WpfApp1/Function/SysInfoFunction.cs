@@ -16,6 +16,7 @@ namespace WpfApp1.Function
             SysInfo sysInfo = new SysInfo();
             int countMemory = 0;
             int countDisk = 0;
+            int countGPU = 0;
             double temp;
             try
             {
@@ -52,11 +53,14 @@ namespace WpfApp1.Function
                 }
                 sysInfo.DiskNumber = countDisk;
 
-                managementObjectSearcher = new ManagementObjectSearcher("Select * FROM Win32_DisplayConfiguration");
+                managementObjectSearcher = new ManagementObjectSearcher("Select * FROM Win32_VideoController");
                 foreach (ManagementObject managementObject in managementObjectSearcher.Get())
                 {
-                    sysInfo.GpuName = managementObject["DeviceName"].ToString().Trim();
+                    sysInfo.GpuName.Add("GPU" + countGPU, managementObject["Name"].ToString().Trim());
+                    countGPU++;
                 }
+                sysInfo.GPUNumber=countGPU;
+
                 managementObjectSearcher = new ManagementObjectSearcher("Select * FROM Win32_BaseBoard");
                 foreach (ManagementObject managementObject in managementObjectSearcher.Get())
                 {
