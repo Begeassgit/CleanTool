@@ -33,8 +33,8 @@
                 <Label x:Name="SysCaption" Content="Label" Canvas.Left="198" Canvas.Top="173" FontSize="14"/>
                 <Label x:Name="SysInfo" Content="系统信息" Canvas.Left="187" Canvas.Top="135" FontWeight="Bold" FontSize="18"/>
                 <Label x:Name="Disk" Content="硬盘信息" Canvas.Left="186" Canvas.Top="341" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.5,0.574"/>
-                <TextBlock Name="DiskInfo" Canvas.Left="203" TextWrapping="Wrap" Text="" Canvas.Top="379" Height="124" Width="242" FontFamily="Microsoft YaHei UI" FontWeight="Normal" FontSize="14"/>
-                <TextBlock Name="GPUName" Canvas.Left="506" TextWrapping="Wrap" Text="" Canvas.Top="277" Height="164" Width="270" FontFamily="Microsoft YaHei UI" FontWeight="Normal" FontSize="14"/>
+                <TextBlock x:Name="DiskInfo" Canvas.Left="203" TextWrapping="Wrap" Text="" Canvas.Top="379" Height="124" Width="242" FontFamily="Microsoft YaHei UI" FontWeight="Normal" FontSize="14"/>
+                <TextBlock x:Name="GPUName" Canvas.Left="506" TextWrapping="Wrap" Text="" Canvas.Top="277" Height="164" Width="270" FontFamily="Microsoft YaHei UI" FontWeight="Normal" FontSize="14"/>
             </Canvas>
         </DockPanel>
     </Grid>

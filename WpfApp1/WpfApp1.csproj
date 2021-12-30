@@ -76,6 +76,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BootConfig.xaml.cs">
+      <DependentUpon>BootConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\BootInfo.cs" />
+    <Compile Include="Function\BootConfigFunction.cs" />
     <Compile Include="Function\SpeedTest.cs" />
     <Compile Include="Speed.xaml.cs">
       <DependentUpon>Speed.xaml</DependentUpon>
@@ -83,6 +88,10 @@
     <Compile Include="Tools.xaml.cs">
       <DependentUpon>Tools.xaml</DependentUpon>
     </Compile>
+    <Page Include="BootConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -37,5 +37,12 @@ namespace WpfApp1
             speed.Show();
             this.Close();
         }
+
+        private void BootBtn_Click(object sender,RoutedEventArgs e)
+        {
+            BootConfig bootConfig = new BootConfig();
+            bootConfig.Show();
+            this.Close();
+        }
     }
 }
