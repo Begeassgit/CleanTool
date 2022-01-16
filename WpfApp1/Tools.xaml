@@ -18,7 +18,7 @@
         <Image Margin="0,195,93,0" Source="Images/electronics.png" Width="100" Height="100" HorizontalAlignment="Right" VerticalAlignment="Top"/>
         <Image Margin="90,375,0,0" Source="Images/wi_fi.png" Width="100" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Button x:Name="SpeedTestBtn" Content="网速测试" HorizontalAlignment="Left" Margin="110,140,0,0" VerticalAlignment="Top" Width="60" Height="30" Background="#FF41C6CD" Click="SpeedTestBtn_Click" Foreground="White" BorderBrush="{x:Null}"/>
-        <Button x:Name="WifiPassBtn" Content="WiFi密码" Margin="110,325,0,0" Height="30" VerticalAlignment="Top" Background="#FF41C6CD" Width="60" HorizontalAlignment="Left" Foreground="White" BorderBrush="{x:Null}" RenderTransformOrigin="0.497,1.532"/>
+        <Button x:Name="WifiPassBtn" Content="WiFi密码" Margin="110,325,0,0" Height="30" VerticalAlignment="Top" Background="#FF41C6CD" Width="60" HorizontalAlignment="Left" Foreground="White" Click="WifiBtn_Click" BorderBrush="{x:Null}" RenderTransformOrigin="0.497,1.532"/>
         <Button x:Name="GPUBtn" Content="GPU测试" HorizontalAlignment="Center" Margin="0,325,0,0" VerticalAlignment="Top" Width="60" Height="30" Background="#FF41C6CD" Foreground="White" BorderBrush="{x:Null}"/>
         <Button x:Name="CPUBtn" Content="CPU测试" Margin="0,140,110,0" VerticalAlignment="Top" Height="30" Background="#FF41C6CD" HorizontalAlignment="Right" Width="60" Foreground="White" BorderBrush="{x:Null}"/>
         <Button x:Name="BootBtn" Content="启动管理" HorizontalAlignment="Left" Margin="378,140,0,0" VerticalAlignment="Top" Width="60" Height="30" Background="#FF41C6CD" Click="BootBtn_Click" Foreground="White" BorderBrush="{x:Null}"/>

@@ -44,5 +44,12 @@ namespace WpfApp1
             bootConfig.Show();
             this.Close();
         }
+
+        private void WifiBtn_Click(object sender,RoutedEventArgs e)
+        {
+            Wifi wifi = new Wifi();
+            wifi.Show();
+            this.Close();
+        }
     }
 }

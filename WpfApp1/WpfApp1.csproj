@@ -52,9 +52,11 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,13 +82,18 @@
       <DependentUpon>BootConfig.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entity\BootInfo.cs" />
+    <Compile Include="Entity\WifiInfo.cs" />
     <Compile Include="Function\BootConfigFunction.cs" />
     <Compile Include="Function\SpeedTest.cs" />
+    <Compile Include="Function\WifiPasswordFunction.cs" />
     <Compile Include="Speed.xaml.cs">
       <DependentUpon>Speed.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tools.xaml.cs">
       <DependentUpon>Tools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wifi.xaml.cs">
+      <DependentUpon>Wifi.xaml</DependentUpon>
     </Compile>
     <Page Include="BootConfig.xaml">
       <SubType>Designer</SubType>
@@ -118,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wifi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,6 +188,9 @@
     <Resource Include="Images\speed.png" />
     <Resource Include="Images\tool_128px.png" />
     <Resource Include="Images\wi_fi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

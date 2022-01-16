@@ -54,16 +54,7 @@ namespace WpfApp1
             Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath("RenderTransform.Angle"));
             storyboard.Children.Add(doubleAnimation);
             storyboard.Begin(this.Click);
-            SpeedTest speedTest = new SpeedTest();
-            double download = speedTest.DownloadTempFile();
-            if (download==-1.0)
-            {
-                time = 0;
-            }
-            else
-            {
-                time = download;
-            }
+
 
         }
     }
