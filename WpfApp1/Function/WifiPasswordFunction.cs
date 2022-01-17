@@ -13,6 +13,8 @@ namespace WpfApp1.Function
     class WifiPasswordFunction
     {
         WifiInfo wifiInfo = new WifiInfo();
+        Bitmap bitmap;
+        BitmapSource bitmapSource;
         public void GetSSID()
         {
             string order = "netsh wlan show interfaces | findstr SSID";
@@ -128,20 +130,29 @@ namespace WpfApp1.Function
         {
             QRCodeGenerator qRCodeGenerator = new QRCodeGenerator();
             QRCodeData qRCodeData 
-                = qRCodeGenerator.CreateQrCode("WIFI S:"+wifiInfo.SSID+";P:"+wifiInfo.Password+";T:"+wifiInfo.Type, 
+                = qRCodeGenerator.CreateQrCode("WIFI:S:"+wifiInfo.SSID+";P:"+wifiInfo.Password+";T:"+wifiInfo.Type+";", 
                 QRCodeGenerator.ECCLevel.H);
             QRCode qRCode = new QRCode(qRCodeData);
-            Bitmap bitmap = qRCode.GetGraphic(20, Color.Black, Color.White,true);
+            bitmap = qRCode.GetGraphic(20, Color.Black, Color.White,true);
             return bitmap;
         }
 
         public BitmapSource BitmapToImage(Bitmap bitmap)
         {
-            BitmapSource bitmapSource 
+            bitmapSource 
                 = Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(),IntPtr.Zero,
                 System.Windows.Int32Rect.Empty,BitmapSizeOptions.FromEmptyOptions());
             return bitmapSource;
            
         }
+
+        public void ImageRecycle()
+        {
+            bitmap.Dispose();
+            bitmapSource=null;
+            GC.Collect();
+        }
+
+
     }
 }

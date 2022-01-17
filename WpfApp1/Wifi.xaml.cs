@@ -22,10 +22,10 @@ namespace WpfApp1
     /// </summary>
     public partial class Wifi : Window
     {
+        WifiPasswordFunction wifiPasswordFunction = new WifiPasswordFunction();
         public Wifi()
         {
             InitializeComponent();
-            WifiPasswordFunction wifiPasswordFunction = new WifiPasswordFunction();
             wifiPasswordFunction.GetSSID();
             wifiPasswordFunction.GetWifiType();
             password.Text = "密码："+wifiPasswordFunction.SetPassword().Password;
@@ -34,9 +34,11 @@ namespace WpfApp1
 
         private void ReturnBtn_Click(object sender, RoutedEventArgs e)
         {
+            wifiPasswordFunction.ImageRecycle();
             Tools tools = new Tools();
             tools.Show();
             this.Close();
+            
         }
 
     }
