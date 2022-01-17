@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WpfApp1;
+using WpfApp1.Function;
+using WpfApp1.Entity;
+
 
 namespace WpfApp1
 {
@@ -23,6 +25,11 @@ namespace WpfApp1
         public Wifi()
         {
             InitializeComponent();
+            WifiPasswordFunction wifiPasswordFunction = new WifiPasswordFunction();
+            wifiPasswordFunction.GetSSID();
+            wifiPasswordFunction.GetWifiType();
+            password.Text = "密码："+wifiPasswordFunction.SetPassword().Password;
+            QRCode.Source = wifiPasswordFunction.BitmapToImage(wifiPasswordFunction.MyQRCode());
         }
 
         private void ReturnBtn_Click(object sender, RoutedEventArgs e)
